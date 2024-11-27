@@ -14,6 +14,7 @@
 		74BE3BB52CE3B4FA004F9F51 /* doItListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BE3BB42CE3B4FA004F9F51 /* doItListTests.swift */; };
 		74BE3BBF2CE3B4FA004F9F51 /* doItListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BE3BBE2CE3B4FA004F9F51 /* doItListUITests.swift */; };
 		74BE3BC12CE3B4FA004F9F51 /* doItListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BE3BC02CE3B4FA004F9F51 /* doItListUITestsLaunchTests.swift */; };
+		74E2DD0A2CF76C6F00BAC169 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E2DD092CF76C6F00BAC169 /* AddTaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		74BE3BBA2CE3B4FA004F9F51 /* doItListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = doItListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BE3BBE2CE3B4FA004F9F51 /* doItListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doItListUITests.swift; sourceTree = "<group>"; };
 		74BE3BC02CE3B4FA004F9F51 /* doItListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doItListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		74E2DD092CF76C6F00BAC169 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		74BE3B972CE3B4F7004F9F51 = {
 			isa = PBXGroup;
 			children = (
+				74E2DD092CF76C6F00BAC169 /* AddTaskView.swift */,
 				74BE3BA22CE3B4F7004F9F51 /* doItList */,
 				74BE3BB32CE3B4FA004F9F51 /* doItListTests */,
 				74BE3BBD2CE3B4FA004F9F51 /* doItListUITests */,
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E2DD0A2CF76C6F00BAC169 /* AddTaskView.swift in Sources */,
 				74BE3BA62CE3B4F7004F9F51 /* ContentView.swift in Sources */,
 				74BE3BA42CE3B4F7004F9F51 /* doItListApp.swift in Sources */,
 			);

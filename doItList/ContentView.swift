@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var tasks: [Task]=[]
+    @State private var isPresentingAddTaskView = false
     
     var body: some View {
         NavigationView{
@@ -24,6 +25,9 @@ struct ContentView: View {
                 Image(systemName:"plus")
             }
             )
+            .sheet(isPresented: $isPresentingAddTaskView){
+                AddTaskView(tasks: $tasks)
+            }
         }
         
     }
