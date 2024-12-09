@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var tasks: [Task]=[]
+    @State private var tasks: [Task] = []
     @State private var isPresentingAddTaskView = false
     
     var body: some View {
         NavigationView{
             List{
-                ForEach(tasks) { task in
-                    TaskRow(task: task)
+                ForEach($tasks) { $task in
+                    TaskRow(task: $task)
                 }
                 .onDelete(perform: deleteTask)
             }
@@ -36,7 +36,7 @@ struct ContentView: View {
     }
     
     func addTask(){
-        
+        isPresentingAddTaskView = true
     }
     
 }
@@ -49,24 +49,35 @@ struct Task: Identifiable{
     var isCompleted: Bool
 }
 
-struct TaskRow: View{
-    var task: Task
+struct TaskRow: View {
+    @State private var isPresentingDetailedView = false
+    @Binding var task: Task
     
-    var body: some View{
-        HStack{
-            Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle").onTapGesture {
-                
-            }
-            VStack(alignment: .leading){
+    var body: some View {
+        HStack {
+            Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
+                .onTapGesture {
+                    task.isCompleted.toggle()
+                }
+            VStack(alignment: .leading) {
                 Text(task.title)
                     .font(.headline)
                 Text(task.priority)
                     .font(.subheadline)
             }
+            Spacer()
+            Button(action: {
+                isPresentingDetailedView = true
+            }) {
+                Image(systemName: "info.circle")
+            }
+            .sheet(isPresented: $isPresentingDetailedView) {
+                TaskDetailView(task: $task)
+            }
         }
     }
-}
 
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
